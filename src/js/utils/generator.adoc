@@ -1,0 +1,31 @@
+= The Generator object 
+
+It is returned by a generator function
+
+It conforms to both the iterable protocol and the iterator protocol.
+
+== Generator 
+
+Generator is a subclass of the hidden Iterator class.
+
+
+== Example 
+
+[source, javascript]
+----
+const foo = function* () {
+  yield 'a';
+  yield 'b';
+  yield 'c';
+};
+
+let str = '';
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+
+
+----

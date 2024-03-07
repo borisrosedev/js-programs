@@ -11,6 +11,10 @@ body {
   margin: 0;
 }
 
+h1, h2, h3 {
+  margin: 0;
+}
+
 ul,
 li {
   list-style: none;
@@ -27,11 +31,158 @@ a {
   color: black;
 }
 
+main {
+  opacity: 0;
+  animation: main-show 500ms ease-in-out forwards;
+}
+
+@keyframes main-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes cube-spinning {
+  0% {
+    transform: rotateX(45deg) rotateY(45deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.cube {
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  animation: cube-spinning 2000ms ease-in-out 1000ms both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cube .face {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: solid 1px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: var(--primary-color);
+}
+.cube .face--front {
+  transform: translateZ(100px);
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: front;
+  background-image: url("./public/images/art-urbain.png");
+  background-color: unset;
+}
+@keyframes front {
+  from {
+    transform: translateZ(100px);
+  }
+  to {
+    transform: translateZ(50px);
+  }
+}
+.cube .face--back {
+  transform: translateZ(-100px);
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: back;
+}
+@keyframes back {
+  from {
+    transform: translateZ(-100px);
+  }
+  to {
+    transform: translateZ(-50px);
+  }
+}
+.cube .face--top {
+  transform: rotateX(90deg) translateZ(100px);
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: top;
+}
+@keyframes top {
+  from {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  to {
+    transform: rotateX(90deg) translateZ(50px);
+  }
+}
+.cube .face--bottom {
+  transform: rotateX(90deg) translateZ(-100px);
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: bottom;
+}
+@keyframes bottom {
+  from {
+    transform: rotateX(90deg) translateZ(-100px);
+  }
+  to {
+    transform: rotateX(90deg) translateZ(-50px);
+  }
+}
+.cube .face--left {
+  transform: rotateY(90deg) translateZ(-100px);
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: left;
+}
+@keyframes left {
+  from {
+    transform: rotateY(90deg) translateZ(-100px);
+  }
+  to {
+    transform: rotateY(90deg) translateZ(-50px);
+  }
+}
+.cube .face--right {
+  transform: rotateY(90deg) translateZ(100px);
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: right;
+}
+@keyframes right {
+  from {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  to {
+    transform: rotateY(90deg) translateZ(50px);
+  }
+}
+
 img,
 video {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: solid red 1px;
 }
 
 button {
@@ -44,6 +195,16 @@ button {
 
 button:active {
   transform: translateY(2px);
+}
+
+.article-input {
+  display: flex;
+  flex-direction: column;
+  border: solid red 1px;
+  margin-block: 10px;
+}
+.article-input__input {
+  padding: 10px;
 }
 
 .app__header {
@@ -122,6 +283,22 @@ button:active {
   right: 0;
   bottom: 0;
   z-index: -2;
+}
+
+.home__main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-main__cube-section {
+  margin-top: 100px;
+}
+
+.login__form {
+  border: solid green 3px;
 }
 
 /*# sourceMappingURL=style.css.map */

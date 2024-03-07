@@ -8,6 +8,11 @@ html {
 
 body {
   margin: 0;
+
+}
+
+h1, h2, h3 {
+  margin: 0;
 }
 
 ul,
@@ -28,3 +33,22 @@ a {
   color: black;
 }
 
+
+
+main {
+
+  opacity: 0;
+  animation: main-show 500ms ease-in-out forwards;
+  
+
+}
+
+
+@keyframes main-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

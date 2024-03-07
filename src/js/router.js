@@ -4,6 +4,8 @@ import homePage from "./pages/home-page.js";
 import landingPage from "./pages/landing-page.js";
 import { LandingContainer } from "./containers/LandingContainer.js";
 import { HomeContainer } from "./containers/HomeContainer.js";
+import { LoginContainer } from "./containers/LoginContainer.js";
+import loginPage from "./pages/login-page.js";
 
 console.log("Dans le fichier router.js");
 
@@ -19,6 +21,9 @@ function createNavigation(path) {
       D.container.innerHTML = homePage();
       new HomeContainer();
       break;
+    case S+P.login:
+      D.container.innerHTML = loginPage()
+      new LoginContainer();
   }
 }
 

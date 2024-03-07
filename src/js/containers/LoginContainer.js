@@ -1,4 +1,4 @@
-import { Paths as P } from "../constants/paths.js";
+import { PATHS as P } from "../constants/paths.js";
 
 export class LoginContainer {
   name = "not-found";
@@ -7,7 +7,7 @@ export class LoginContainer {
 
   get email() {
     return this._email
-  };
+  }
 
   set email(val){
       this._email = val
@@ -48,7 +48,7 @@ export class LoginContainer {
     }
   }
 
-  onSubmit(e) {
-    this.password = ""
+  onSubmit() {
+    
   }
 }
