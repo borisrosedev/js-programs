@@ -1,0 +1,11 @@
+button {
+    outline: none;
+    box-shadow: 0 3px gray;
+    border: none;
+    cursor: pointer;
+    padding: 8px 20px;
+  }
+  button:active {
+    transform: translateY(2px);
+  }
+  

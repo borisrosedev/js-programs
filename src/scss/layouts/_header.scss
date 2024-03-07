@@ -1,0 +1,68 @@
+.app__header {
+  height: 8vh;
+  box-shadow: 1px 1px 5px grey;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  background-color: rgba(128, 202, 255, 0.2);
+  opacity: 0;
+  animation: header-down 500ms ease-in-out forwards;
+  z-index: 10;
+
+  figure {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  nav {
+    display: flex;
+    opacity: 0;
+    animation: nav-left 500ms ease-in-out 500ms forwards;
+    ul {
+        display: flex;
+    }
+    li {
+      margin-inline: 10px;
+      a {
+        transition: all 300ms ease-in-out;
+      }
+      &:hover > a {
+        color: orangered;
+      }
+    
+    }
+  }
+}
+
+
+@keyframes header-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes nav-left {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
