@@ -5,11 +5,11 @@ export default function(data, index){
         
             <article class="article-input">
 
-                <label for=${data.name}></label>
+                <label for="${data.name}"></label>
                 <input 
                     class="article-input__input"
-                    type=${data.type} 
-                    placeholder=${data.placeholder}
+                    type="${data.type}"
+                    placeholder="${data.placeholder}"
                 />
                 <section class="article-input__error" id="input-error-${index}">
                 </section>

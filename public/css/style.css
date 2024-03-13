@@ -182,7 +182,7 @@ video {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border: solid red 1px;
+  border: solid black 1px;
 }
 
 button {
@@ -200,7 +200,6 @@ button:active {
 .article-input {
   display: flex;
   flex-direction: column;
-  border: solid red 1px;
   margin-block: 10px;
 }
 .article-input__input {
@@ -297,8 +296,32 @@ button:active {
   margin-top: 100px;
 }
 
+.login__main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .login__form {
-  border: solid green 3px;
+  width: 500px;
+}
+
+.login__options {
+  display: flex;
+}
+
+.login__options li {
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  border: solid black 1px;
+  transition: all 500ms ease-in-out;
+}
+.login__options li:hover {
+  background-color: rgb(128, 202, 255);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

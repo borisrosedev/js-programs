@@ -1,4 +1,4 @@
-import ArticleInput from "./article-input"
+import ArticleInput from "./article-input.js"
 
 export default function(data, title) {
 
@@ -9,7 +9,7 @@ export default function(data, title) {
                 ${title}
             </h2>
             <section class="form__inputs">
-                ${data.map((el, index) => ArticleInput(el, index).join(''))}
+                ${data.map((el, index) => ArticleInput(el, index)).join('')}
             </section>
         </form>
         

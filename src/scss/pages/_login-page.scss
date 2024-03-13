@@ -1,3 +1,34 @@
+@use '../base/base';
+
+.login__main  {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .login__form {
-    border: solid green 3px;
+
+    width: 500px;
+}
+
+.login__options {
+    display: flex;
+    
+
+    
+}
+
+.login__options li {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    border: solid black 1px;
+    transition: all 500ms ease-in-out;
+
+    &:hover {
+        background-color: base.$primary-color;
+        cursor: pointer;
+    }
 }
